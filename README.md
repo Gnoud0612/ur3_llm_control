@@ -33,27 +33,34 @@ ur3_llm_control/
 
 ## 3. Hướng dẫn cài đặt và khởi chạy chi tiết
 
-Bước 1: Cài đặt và biên dịch mã nguồn (Build Workspace)
+# Bước 1: Cài đặt và biên dịch mã nguồn (Build Workspace)
 Mở Terminal và clone repository này vào thư mục src trong workspace ROS 2 của bạn (ví dụ: ~/workspaces/ur_gz/src):
 # Tiến hành build package
 cd ~/workspaces/ur_gz
+
 colcon build --packages-select ur3_llm_control --symlink-install
+
 source install/setup.bash
 # Cập nhật môi trường
 source install/setup.bash
 
-Bước 2: Bật AI Gateway (9Router)
+# Bước 2: Bật AI Gateway (9Router)
 Chương trình yêu cầu 9Router để làm cầu nối giao tiếp với LLM. Mở một Terminal mới và chạy:
+
 export NODE_TLS_REJECT_UNAUTHORIZED=0
+
 9router
 
-Bước 3: Khởi chạy Node Điều khiển
+# Bước 3: Khởi chạy Node Điều khiển
 Quay lại Terminal ở Bước 1 (đã source môi trường), tiến hành khởi chạy chương trình bằng file Launch:
+
 ros2 run ur3_llm_control executor
 
 ## 4. Kịch bản kiểm thử (Test Cases)
 Kịch bản 1: Thực thi chuẩn xác theo Mã sinh viên
-Lệnh nhập vào: Arrange all objects according to my student ID
+
+Arrange all objects according to my student ID
 
 Kịch bản 2: Bộ lọc an toàn (Bẫy lỗi vùng đích không tồn tại)
-Lệnh nhập vào: Put the red cube in zone D
+
+Put the red cube in zone D
