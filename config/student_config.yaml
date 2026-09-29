@@ -1,0 +1,9 @@
+student_info:
+  name: "Nguyen Tung Duong"
+  id: "23020732"
+  mod_val: 2
+
+target_mapping:
+  zone_a: "yellow_cube"
+  zone_b: "red_cube"
+  zone_c: "blue_cube"
